@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th= "http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form th:object="${newGame}" th:action="@{/update/{id}(id=${newGame.id})}" method=POST>
+Name: <input name="name" size="20" th:field= "*{name}"> <br />
+Type: <input name="type" size="20" th:field= "*{type}"> <br />
+Price: <input name="price" size="20" th:field= "*{price}"> <br />
+<input name="submit" type="submit" value="submit"/>
+</form>
+<a href="viewAll">View all Contacts</a>
+</body>
+</html>

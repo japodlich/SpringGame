@@ -15,15 +15,15 @@ import josh.controller.BeanConfiguration;
 import josh.repository.GamesRepository;
 
 @SpringBootApplication
-public class SpringGameApplication implements CommandLineRunner {
-	@Autowired
-	GamesRepository repo;
+public class SpringGameApplication{
+	//@Autowired
+	//GamesRepository repo;
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringGameApplication.class, args);
 	}
 
-	@Override
+	/*@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
 		ApplicationContext appContext = new AnnotationConfigApplicationContext(BeanConfiguration.class);
@@ -38,6 +38,6 @@ public class SpringGameApplication implements CommandLineRunner {
 			System.out.println(game.toString());
 		}
 		((AbstractApplicationContext) appContext).close();
-	}
+	*/}
 
-}
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th= "http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form>
+<table>
+<tr th:each="currentGame : ${games}">
+<td th:text="${currentGame.id}"/>
+<td th:text="${currentGame.name"/>
+<td th:text="${currentGame.type"/>
+<td th:text="${currentGame.price"/>
+<td><a th:href="@{/edit/{id}(id=${currentGame.id})}">Edit</a></td>
+<td><a th:href="@{/delete/{id}(id=${currentGame.id})}">Delete</a></td>
+</tr>
+</table>
+</form>
+<a href="../inputGame">Add a new game</a>
+</body>
+</html>
